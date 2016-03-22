@@ -17,7 +17,8 @@
 /**
  *  服务器地址:外网
  */
-#define klBaseURL   @"http://api.51dy.ren/Api/"  //
+#define klBaseURL   @"http://api.51dy.ren/Api/"
+
 
 
 #endif /* URLConfig_h */

@@ -30,6 +30,7 @@
 		04B7F7D81CA1212000A120A8 /* MyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7D71CA1212000A120A8 /* MyWebView.m */; };
 		04B7F7DE1CA1219F00A120A8 /* MyBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7DB1CA1219F00A120A8 /* MyBanner.m */; };
 		04B7F7DF1CA1219F00A120A8 /* MyPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7DD1CA1219F00A120A8 /* MyPageControl.m */; };
+		04B7F7E31CA136EE00A120A8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7E21CA136EE00A120A8 /* Reachability.m */; };
 		F9549F9FC35941B77E2C12F0 /* libPods-GeneralProjectWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3B3C058C7D1A1E6867C83 /* libPods-GeneralProjectWork.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,8 @@
 		04B7F7DB1CA1219F00A120A8 /* MyBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBanner.m; sourceTree = "<group>"; };
 		04B7F7DC1CA1219F00A120A8 /* MyPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageControl.h; sourceTree = "<group>"; };
 		04B7F7DD1CA1219F00A120A8 /* MyPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageControl.m; sourceTree = "<group>"; };
+		04B7F7E11CA136EE00A120A8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		04B7F7E21CA136EE00A120A8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		A0DA97989BA93876888B63F4 /* Pods-GeneralProjectWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralProjectWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeneralProjectWork/Pods-GeneralProjectWork.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB3B3C058C7D1A1E6867C83 /* libPods-GeneralProjectWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeneralProjectWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F726A85B7F5B86F6C30810CA /* Pods-GeneralProjectWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralProjectWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeneralProjectWork/Pods-GeneralProjectWork.release.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +285,7 @@
 		04287B191C9FCFC70061AFCF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				04B7F7E01CA136EE00A120A8 /* Reachability */,
 				04B7F7C51CA1101800A120A8 /* BaseViewController */,
 				04B7F7BB1CA10FC700A120A8 /* CRNavigationController */,
 				04287B1A1C9FD0350061AFCF /* Extention */,
@@ -376,6 +380,15 @@
 				04B7F7DD1CA1219F00A120A8 /* MyPageControl.m */,
 			);
 			path = MyBanner;
+			sourceTree = "<group>";
+		};
+		04B7F7E01CA136EE00A120A8 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				04B7F7E11CA136EE00A120A8 /* Reachability.h */,
+				04B7F7E21CA136EE00A120A8 /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		ABB35C9BBA6000FE8F46C2DA /* Pods */ = {
@@ -554,6 +567,7 @@
 				04B7F7C41CA10FC700A120A8 /* CRUIToolbar.m in Sources */,
 				04287AD81C9F88D60061AFCF /* main.m in Sources */,
 				04B7F7DF1CA1219F00A120A8 /* MyPageControl.m in Sources */,
+				04B7F7E31CA136EE00A120A8 /* Reachability.m in Sources */,
 				04B7F7D81CA1212000A120A8 /* MyWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
