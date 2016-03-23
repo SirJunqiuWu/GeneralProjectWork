@@ -20,6 +20,7 @@
 		04287B1D1C9FD04E0061AFCF /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287B1C1C9FD04E0061AFCF /* UIViewExt.m */; };
 		04287B231C9FD17E0061AFCF /* CoreUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287B201C9FD17E0061AFCF /* CoreUtil.m */; };
 		04287B241C9FD17E0061AFCF /* UtilTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287B221C9FD17E0061AFCF /* UtilTool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		04B478B51CA2449E00B81EDC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B478B41CA2449E00B81EDC /* AVFoundation.framework */; };
 		04B7F7C21CA10FC700A120A8 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7BD1CA10FC700A120A8 /* CRNavigationBar.m */; };
 		04B7F7C31CA10FC700A120A8 /* CRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7BF1CA10FC700A120A8 /* CRNavigationController.m */; };
 		04B7F7C41CA10FC700A120A8 /* CRUIToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7C11CA10FC700A120A8 /* CRUIToolbar.m */; };
@@ -31,6 +32,9 @@
 		04B7F7DE1CA1219F00A120A8 /* MyBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7DB1CA1219F00A120A8 /* MyBanner.m */; };
 		04B7F7DF1CA1219F00A120A8 /* MyPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7DD1CA1219F00A120A8 /* MyPageControl.m */; };
 		04B7F7E31CA136EE00A120A8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B7F7E21CA136EE00A120A8 /* Reachability.m */; };
+		04B7F7EF1CA232E200A120A8 /* 37x-failed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B7F7EC1CA232E200A120A8 /* 37x-failed@2x.png */; };
+		04B7F7F01CA232E200A120A8 /* 37x-success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B7F7ED1CA232E200A120A8 /* 37x-success@2x.png */; };
+		04B7F7F11CA232E200A120A8 /* 37x-warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B7F7EE1CA232E200A120A8 /* 37x-warning@2x.png */; };
 		F9549F9FC35941B77E2C12F0 /* libPods-GeneralProjectWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB3B3C058C7D1A1E6867C83 /* libPods-GeneralProjectWork.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +79,7 @@
 		04287B201C9FD17E0061AFCF /* CoreUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreUtil.m; sourceTree = "<group>"; };
 		04287B211C9FD17E0061AFCF /* UtilTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilTool.h; sourceTree = "<group>"; };
 		04287B221C9FD17E0061AFCF /* UtilTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilTool.m; sourceTree = "<group>"; };
+		04B478B41CA2449E00B81EDC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		04B7F7BC1CA10FC700A120A8 /* CRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRNavigationBar.h; sourceTree = "<group>"; };
 		04B7F7BD1CA10FC700A120A8 /* CRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRNavigationBar.m; sourceTree = "<group>"; };
 		04B7F7BE1CA10FC700A120A8 /* CRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRNavigationController.h; sourceTree = "<group>"; };
@@ -97,6 +102,9 @@
 		04B7F7DD1CA1219F00A120A8 /* MyPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageControl.m; sourceTree = "<group>"; };
 		04B7F7E11CA136EE00A120A8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		04B7F7E21CA136EE00A120A8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		04B7F7EC1CA232E200A120A8 /* 37x-failed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-failed@2x.png"; sourceTree = "<group>"; };
+		04B7F7ED1CA232E200A120A8 /* 37x-success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-success@2x.png"; sourceTree = "<group>"; };
+		04B7F7EE1CA232E200A120A8 /* 37x-warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-warning@2x.png"; sourceTree = "<group>"; };
 		A0DA97989BA93876888B63F4 /* Pods-GeneralProjectWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralProjectWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeneralProjectWork/Pods-GeneralProjectWork.debug.xcconfig"; sourceTree = "<group>"; };
 		CEB3B3C058C7D1A1E6867C83 /* libPods-GeneralProjectWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeneralProjectWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F726A85B7F5B86F6C30810CA /* Pods-GeneralProjectWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneralProjectWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeneralProjectWork/Pods-GeneralProjectWork.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B478B51CA2449E00B81EDC /* AVFoundation.framework in Frameworks */,
 				04287AFF1C9F8A3A0061AFCF /* Foundation.framework in Frameworks */,
 				04287AFD1C9F8A220061AFCF /* UIKit.framework in Frameworks */,
 				F9549F9FC35941B77E2C12F0 /* libPods-GeneralProjectWork.a in Frameworks */,
@@ -146,7 +155,7 @@
 		04287AD51C9F88D60061AFCF /* GeneralProjectWork */ = {
 			isa = PBXGroup;
 			children = (
-				04287B011C9F8AC10061AFCF /* Resources */,
+				04B7F7EA1CA2327A00A120A8 /* Resources */,
 				04287B001C9F8AC10061AFCF /* Code */,
 				04287AD91C9F88D60061AFCF /* AppDelegate.h */,
 				04287ADA1C9F88D60061AFCF /* AppDelegate.m */,
@@ -182,6 +191,7 @@
 		04287AFB1C9F89BB0061AFCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04B478B41CA2449E00B81EDC /* AVFoundation.framework */,
 				04287AFE1C9F8A3A0061AFCF /* Foundation.framework */,
 				04287AFC1C9F8A220061AFCF /* UIKit.framework */,
 				CEB3B3C058C7D1A1E6867C83 /* libPods-GeneralProjectWork.a */,
@@ -201,13 +211,6 @@
 				04287B021C9F911F0061AFCF /* Macro */,
 			);
 			path = Code;
-			sourceTree = "<group>";
-		};
-		04287B011C9F8AC10061AFCF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		04287B021C9F911F0061AFCF /* Macro */ = {
@@ -391,6 +394,24 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		04B7F7EA1CA2327A00A120A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04B7F7EB1CA2329200A120A8 /* CommomImage */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04B7F7EB1CA2329200A120A8 /* CommomImage */ = {
+			isa = PBXGroup;
+			children = (
+				04B7F7EC1CA232E200A120A8 /* 37x-failed@2x.png */,
+				04B7F7ED1CA232E200A120A8 /* 37x-success@2x.png */,
+				04B7F7EE1CA232E200A120A8 /* 37x-warning@2x.png */,
+			);
+			path = CommomImage;
+			sourceTree = "<group>";
+		};
 		ABB35C9BBA6000FE8F46C2DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +506,9 @@
 			files = (
 				04287AE61C9F88D60061AFCF /* LaunchScreen.storyboard in Resources */,
 				04287AE31C9F88D60061AFCF /* Assets.xcassets in Resources */,
+				04B7F7F01CA232E200A120A8 /* 37x-success@2x.png in Resources */,
+				04B7F7EF1CA232E200A120A8 /* 37x-failed@2x.png in Resources */,
+				04B7F7F11CA232E200A120A8 /* 37x-warning@2x.png in Resources */,
 				04287AE11C9F88D60061AFCF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
