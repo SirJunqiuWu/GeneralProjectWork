@@ -10,7 +10,7 @@
 
 @implementation CoreUtil
 
-#pragma mark - 字符串处理模块
+#pragma mark ------------------ 字符串处理模块 --------------
 
 + (NSString *)getTimeStringByDate:(NSDate *)date Formatter:(NSString *)formatter {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -64,6 +64,23 @@
     [resultString addAttribute:NSForegroundColorAttributeName value:color range:range];
     return resultString;
 }
+
++ (BOOL)isAllSpaceInTheString:(NSString *)string {
+    BOOL result = YES;
+    for (int i = 0; i <string.length; i ++) {
+        NSRange range = NSMakeRange(i, 1);
+        NSString *tempStr = [string substringWithRange:range];
+        /**
+         *  发现有一个不是，即返回NO
+         */
+        if (![tempStr isEqualToString:@" "]) {
+            result = NO;
+        }
+    }
+    return result;
+}
+
+#pragma mark ------------------ 获取UIImage模块 -------------
 
 + (UIImage *)getVideoFirstFrameWithVideoUrl:(NSString *)videoUrl VideoStatus:(VideoStatus)videoStatus {
     UIImage *resultImage = nil;

@@ -80,6 +80,16 @@ typedef enum {
 + (NSAttributedString *)getFormatStringWithSourceString:(NSString *)source KeyWords:(NSString *)keyWords Font:(UIFont *)font Color:(UIColor*)color;
 
 
+/**
+ *  判断该字符串是否全部为空格
+ *
+ *  @param string 目标字符串
+ *
+ *  @return YES,目标字符串全部是空格;反之不是
+ */
++ (BOOL)isAllSpaceInTheString:(NSString *)string;
+
+
 #pragma mark ------------------ 加载框提示模块 --------------
 
 + (void)showHud:(NSString *)title View:(UIView *)view;
