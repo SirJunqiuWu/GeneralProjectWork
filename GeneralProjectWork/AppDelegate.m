@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "MyTabBarController.h"
 
 @interface AppDelegate ()
+{
+    MyTabBarController *myTabBarVC;
+}
 
 @end
 
@@ -46,6 +50,10 @@
 
 - (UIViewController *)rootViewController {
     return self.window.rootViewController;
+}
+
+- (void)setWindowWithActionType:(AppDelegateTargetActionType)actionType {
+    
 }
 
 @end

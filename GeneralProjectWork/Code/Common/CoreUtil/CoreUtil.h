@@ -140,4 +140,77 @@ typedef enum {
 + (BOOL)isNetwork;
 
 
+#pragma mark ------------------ 视图模块 --------------
+
+/**
+ *  创建系统菊花
+ *
+ *  @return UIActivityIndicatorView
+ */
++ (UIActivityIndicatorView *)creatActivityIndicatorView;
+
+
+/**
+ *  创建无数据时的提示视图
+ *
+ *  @param frame UIView的坐标
+ *  @param target 当前对象
+ *  @param selector 事件
+ *  @param text 文字介绍
+ *  @return UIView
+ */
++ (UIView *)creatNoDataViewWithFrame:(CGRect)frame Target:(id)target Selector:(SEL)selector Text:(NSString *)text;
+
+
+
+/**
+ *  创建自定义键盘toolBar,确定和取消按钮内嵌到toolBar上
+ *
+ *  @param target         当前对象
+ *  @param okSelector     确定按钮事件
+ *  @param cancelSelector 取消按钮事件
+ *
+ *  @return UIToolbar
+ */
++ (UIToolbar *)createToolBarWithTarget:(id)target RightAction:(SEL)okSelector LeftAction:(SEL)cancelSelector;
+
+
+/**
+ *  系统日历触发的和日历连在一起的view,确定和取消按钮内嵌到view上 (UIPickerView同理)
+ *
+ *  @param picker         UIDatePicker
+ *  @param okSelector     确定按钮事件
+ *  @param cancelSelector 取消按钮事件
+ *  @param target         当前对象
+ *
+ *  @return UIView
+ */
++ (UIView *)createInputViewWithDatePicker:(UIDatePicker *)picker RightAction:(SEL)okSelector LeftAction:(SEL)cancelSelector Target:(id)target;
+
+
+/**
+ *  创建导航左右按钮视图
+ *
+ *  @param target   当前对象
+ *  @param selector 按钮事件
+ *  @param iconName 按钮显示的icon名字
+ *  @param iconSize icon大小
+ *  @param isLeft   YES,左边按钮;反之右边按钮
+ *
+ *  @return UIBarButtonItem
+ */
++ (UIBarButtonItem *)createNavgationBarButtonItemWithTarget:(id)target Selector:(SEL)selector IconName:(NSString *)iconName IconSize:(CGSize)iconSize IsLeft:(BOOL)isLeft;
+
+
+/**
+ *  返回一个显示标题的UIView
+ *
+ *  @param title 标题
+ *  @param color 标题颜色
+ *  @param font  标题字体大小
+ *
+ *  @return UIView
+ */
++ (UIView *)createTitleViewWithTitle:(NSString *)title TitleColor:(UIColor *)color Font:(float)font;
+
 @end

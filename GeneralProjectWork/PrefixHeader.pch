@@ -22,6 +22,7 @@
 #import "FMDBConfig.h"
 #import "ControllerConfig.h"
 #import "SizeFontColorConfig.h"
+#import "GeneralProjectWorkDefs.h"
 #import "CoreUtil.h"
 #import "UIViewExt.h"
 #import <Addition/AdditionFrameworks.h>

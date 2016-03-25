@@ -292,4 +292,140 @@
     return status;
 }
 
+#pragma mark -------------------------------------- 视图模块 --------------------
+
++ (UIActivityIndicatorView *)creatActivityIndicatorView {
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake((AppScreenWidth-20)/2,(AppScreenHeight-30-64)/2,30.0f,30.0f)];
+    [activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    return activityIndicator;
+}
+
++ (UIView *)creatNoDataViewWithFrame:(CGRect)frame Target:(id)target Selector:(SEL)selector Text:(NSString *)text {
+    UIView *resultView = [[UIView alloc]initWithFrame:frame];
+    resultView.userInteractionEnabled = YES;
+    
+    UIImageView *noDataIcon = [[UIImageView alloc]initWithFrame:AppFrame((resultView.width-259/2)/2,0,259/2,38/2)];
+    noDataIcon.backgroundColor = [UIColor clearColor];
+    noDataIcon.image = [UIImage imageNamed:@"noDataIcon"];
+    [resultView addSubview:noDataIcon];
+    
+    UILabel *noRecordLbl = [[UILabel alloc] init];
+    noRecordLbl.frame = AppFrame(0,noDataIcon.bottom+10, resultView.width,16);
+    noRecordLbl.font = FONT16;
+    noRecordLbl.textColor = Color_949494;
+    noRecordLbl.text = text;
+    noRecordLbl.textAlignment = NSTextAlignmentCenter;
+    noRecordLbl.userInteractionEnabled = NO;
+    [resultView addSubview:noRecordLbl];
+    
+    return resultView;
+}
+
++ (UIToolbar *)createToolBarWithTarget:(id)target RightAction:(SEL)okSelector LeftAction:(SEL)cancelSelector {
+    UIToolbar *bar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0,AppScreenWidth, 44)];
+    
+    UIButton *okbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    okbtn.frame = AppFrame(0, 0, 44, 44);
+    [okbtn setTitle:@"确定" forState:UIControlStateNormal];
+    okbtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [okbtn setTitleColor:LightBlueColor forState:UIControlStateNormal];
+    [okbtn addTarget:target action:okSelector forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *cancelbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelbtn.frame = AppFrame(0, 0, 44, 44);
+    [cancelbtn setTitle:@"取消" forState:UIControlStateNormal];
+    cancelbtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [cancelbtn setTitleColor:LightBlueColor forState:UIControlStateNormal];
+    [cancelbtn addTarget:target action:cancelSelector forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *okBtn = [[UIBarButtonItem alloc]initWithCustomView:okbtn];
+    UIBarButtonItem *cancelBtn = [[UIBarButtonItem alloc]initWithCustomView:cancelbtn];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:target action:nil];
+    NSArray *btarr = [NSArray arrayWithObjects:cancelBtn,space,okBtn,nil];
+    bar.items =btarr;
+    
+    /**
+     *  UIBarButtonItem 的字体颜色
+     */
+    bar.tintColor = [UIColor colorWithHexString:@"#00d7dc"];
+    
+    /**
+     *  间接改变toolBar的背景色
+     */
+    UIImage *img = [self getImageFromColor:[UIColor colorWithHexString:@"#e3e3e3"]];
+    [bar setBackgroundImage:img forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    
+    return bar;
+}
+
++ (UIView *)createInputViewWithObj:(id)obj RightAction:(SEL)okSelector LeftAction:(SEL)cancelSelector Target:(id)target {
+    UIView *inputView = [[UIView alloc]init];
+    inputView.frame = AppFrame(0, 0, AppScreenWidth, 260);
+    
+    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:20];
+    [cancelBtn setTitleColor:[UIColor colorWithHexString:@"#ffa300"] forState:UIControlStateNormal];
+    [cancelBtn addTarget:target action:cancelSelector forControlEvents:UIControlEventTouchUpInside];
+    [inputView addSubview:cancelBtn];
+    
+    UIButton *completeBtn = [[UIButton alloc] initWithFrame:CGRectMake(AppScreenWidth-50, 0, 50, 44)];
+    [completeBtn setTitle:@"确定" forState:UIControlStateNormal];
+    completeBtn.titleLabel.font = [UIFont systemFontOfSize:20];
+    [completeBtn setTitleColor:[UIColor colorWithHexString:@"#ffa300"] forState:UIControlStateNormal];
+    [completeBtn addTarget:target action:okSelector forControlEvents:UIControlEventTouchUpInside];
+    [inputView addSubview:completeBtn];
+    
+    inputView.frame = AppFrame(0, 44, AppScreenWidth, 216);
+    [inputView addSubview:obj];
+    return inputView;
+}
+
++ (UIBarButtonItem *)creatNavgationBarButtonItemWithTarget:(id)target Selector:(SEL)selector IconName:(NSString *)iconName IconSize:(CGSize)iconSize IsLeft:(BOOL)isLeft {
+    UIView *backView  = [[UIView alloc]initWithFrame:AppFrame(0, 0,50, 44)];
+    backView.userInteractionEnabled = YES;
+    
+    UIImage *icon = [UIImage imageNamed:iconName];
+    UIImageView *backImage = [[UIImageView alloc]initWithImage:icon];
+    if (isLeft)
+    {
+        backImage.frame = AppFrame(0,(backView.height-iconSize.height)/2,iconSize.width,iconSize.height);
+    }
+    else
+    {
+        backImage.frame = AppFrame(backView.width-iconSize.width,(backView.height-iconSize.height)/2, iconSize.width,iconSize.height);
+    }
+    backImage.userInteractionEnabled = YES;
+    [backView addSubview:backImage];
+    
+    UIButton *backbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backbtn.frame = backView.frame;
+    [backbtn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    [backView addSubview:backbtn];
+    
+    UIBarButtonItem *navItem = [[UIBarButtonItem alloc]initWithCustomView:backView];
+    return navItem;
+}
+
++ (UIView *)createTitleViewWithTitle:(NSString *)title TitleColor:(UIColor *)color Font:(float)font {
+    UIView* titleView =[[UIView alloc]init];
+    if (_IPHONE6 || _IPHONE6p)
+    {
+        titleView.frame = AppFrame(0,0,230,25);
+    }
+    else if (_IPHONE5_5c_5s || _IPHONE4_4s)
+    {
+        titleView.frame = AppFrame(0,0,185,25);
+    }
+    titleView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    
+    UILabel* titleLbl =[[UILabel alloc]initWithFrame:titleView.frame];
+    titleLbl.text = title;
+    titleLbl.textColor = color;
+    titleLbl.font = [UIFont boldSystemFontOfSize:font];
+    titleLbl.textAlignment = NSTextAlignmentCenter;
+    [titleView addSubview:titleLbl];
+    return titleView;
+}
+
 @end
