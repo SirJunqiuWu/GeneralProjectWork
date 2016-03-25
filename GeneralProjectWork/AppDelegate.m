@@ -24,6 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    /**
+     * 可随意切换根视图
+     */
     [self setWindowWithActionType:Guide];
     return YES;
 }
