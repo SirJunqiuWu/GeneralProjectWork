@@ -12,6 +12,7 @@
 #import "CRNavigationController.h"
 #import "GuideController.h"
 #import "AdvertiseController.h"
+#import "LoginController.h"
 #import "DA01Controller.h"
 #import "DB01Controller.h"
 #import "DC01Controller.h"

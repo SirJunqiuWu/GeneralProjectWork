@@ -12,6 +12,9 @@
 @interface AppDelegate ()
 {
     MyTabBarController *myTabBarVC;
+    GuideController *guideVC;
+    AdvertiseController *adVC;
+    LoginController *loginVC;
 }
 
 @end
@@ -21,6 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setWindowWithActionType:Guide];
     return YES;
 }
 
@@ -53,7 +57,69 @@
 }
 
 - (void)setWindowWithActionType:(AppDelegateTargetActionType)actionType {
+    [self removeWindowAllObjects];
+    UIViewController *viewController;
+    if (actionType == Default || actionType == Home)
+    {
+        /**
+         *  主页
+         */
+        myTabBarVC = [[MyTabBarController alloc]init];
+        
+        /**
+         *  应用在未开启时收到通知,设置为0
+         */
+        [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        viewController = myTabBarVC;
+    }
+    else if (actionType == Guide)
+    {
+        /**
+         *  引导
+         */
+        guideVC = [[GuideController alloc]init];
+        viewController = guideVC;
+    }
+    else if (actionType == Ad)
+    {
+        /**
+         *  广告
+         */
+        adVC = [[AdvertiseController alloc]init];
+        viewController = adVC;
+    }
+    else if (actionType == Login)
+    {
+        /**
+         *  登陆
+         */
+        loginVC  = [[LoginController alloc]init];
+        viewController = loginVC;
+    }
+    self.window.rootViewController = viewController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)removeWindowAllObjects {
+    [self.window.rootViewController removeFromParentViewController];
+    if (myTabBarVC)
+    {
+        [myTabBarVC removeFromParentViewController];
+        myTabBarVC = nil;
+    }
     
+    if (guideVC)
+    {
+        [guideVC removeFromParentViewController];
+        guideVC = nil;
+    }
+    
+    if (adVC)
+    {
+        [adVC removeFromParentViewController];
+        adVC = nil;
+    }
 }
 
 @end

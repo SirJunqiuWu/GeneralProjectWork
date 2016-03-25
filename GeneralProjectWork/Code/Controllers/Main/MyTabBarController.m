@@ -48,28 +48,28 @@
      */
     da01VC = [[DA01Controller alloc]init];
     CRNavigationController *navOne = [[CRNavigationController alloc]initWithRootViewController:da01VC];
-    navOne.title = @"首页";
+    da01VC.title = @"首页";
     
     /**
      *  微现场
      */
     db01VC = [[DB01Controller alloc]init];
     CRNavigationController *navTwo = [[CRNavigationController alloc]initWithRootViewController:db01VC];
-    navTwo.title = @"分类";
+    db01VC.title = @"分类";
     
     /**
      *  消息
      */
     dc01VC = [[DC01Controller alloc]init];
     CRNavigationController *navThree = [[CRNavigationController alloc]initWithRootViewController:dc01VC];
-    navThree.title = @"消息";
+    dc01VC.title = @"消息";
     
     /**
      *  我的
      */
     de01VC = [[DE01Controller alloc]init];
     CRNavigationController *navFour = [[CRNavigationController alloc]initWithRootViewController:de01VC];
-    navFour.title = @"我的";
+    de01VC.title = @"我的";
     
     self.viewControllers = [NSArray arrayWithObjects:navOne,navTwo,navThree,navFour, nil];
     for (int i = 0; i<self.viewControllers.count;i++)
